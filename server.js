@@ -1,4 +1,4 @@
-//require('dotenv').config(); 
+require('dotenv').config(); 
 
 const { createServer } = require('http');
 const express = require("express");
