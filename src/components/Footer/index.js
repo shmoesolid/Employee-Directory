@@ -3,8 +3,8 @@ import "./style.css";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <span>LinkedUp { new Date().getFullYear() }</span>
+    <footer className="footer text-center rounded">
+      <span className="rounded">Shane Koehler { new Date().getFullYear() }</span>
     </footer>
   );
 }

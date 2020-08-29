@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import API from "../utils/API";
-//import Container from "../components/Container";
+import Container from "../components/Container";
+import Row from "../components/Row";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import ButtonBar from "../components/ButtonBar";
 
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
@@ -60,17 +64,16 @@ function Directory()
     }, []);
 
     return (
-        <div>
-            <div className="button-bar">
-                <button onClick={() => sizeToFit()}>Size to Fit</button>
-                <button onClick={() => autoSizeAll(false)}>Auto-Size All</button>
-            </div>
-            <div
+        <Container>
+            <Header />
+            <ButtonBar sizeToFit={sizeToFit} autoSizeAll={autoSizeAll} />
+            <Row
                 className="ag-theme-alpine"
                 style={{
                     height: '600px',
                     minWidth: '350px',
-                    width: '100%' }}
+                    width: '100%' 
+                }}
             >
                 <AgGridReact
                     columnDefs={columns}
@@ -81,8 +84,11 @@ function Directory()
                     onGridReady={onGridReady}
                 >
                 </AgGridReact>
-            </div>
-        </div>
+            </Row>
+
+            <Footer />
+        </Container>
+        
     );
 }
 
