@@ -70,7 +70,7 @@ function Directory()
             <Row
                 className="ag-theme-alpine"
                 style={{
-                    height: '600px',
+                    height: '500px',
                     minWidth: '350px',
                     width: '100%' 
                 }}
